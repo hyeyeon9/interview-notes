@@ -16,6 +16,7 @@ datasource db {
 
 model Question {
   id String @id @default(uuid())
+  order Int @default(autoincrement())
   text String 
   category String
   level String
