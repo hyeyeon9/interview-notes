@@ -20,4 +20,17 @@ model Question {
   category String
   level String
   createdAt DateTime @default(now())
+
+  answers Answer[]
+}
+
+
+model Answer {
+  id String @id @default(uuid())
+  text String 
+  createdAt DateTime @default(now())
+
+ questionId String
+ question Question @relation(fields :[questionId], references : [id] )
+
 }
