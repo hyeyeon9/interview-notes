@@ -1,13 +1,9 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function BackButton() {
-  const router = useRouter();
-
   return (
-    <div className="cursor-pointer" onClick={() => router.back()}>
-      뒤로가기
-    </div>
+    <Link href="/">
+      <div className="cursor-pointer">← 뒤로가기</div>
+    </Link>
   );
 }
