@@ -36,9 +36,11 @@ export default async function QuestionDetailPage({ params }: Props) {
         </div>
         <p className="text-lg py-2">{question.text}</p>
       </div>
-      <AnswerForm id={question.id} />
+
+      <AnswerForm id={question.id} question={question.text}/>
+
       <div className="flex justify-between">
-        <DeleteButton />
+        <DeleteButton id={question.id} />
         <div className="flex gap-4">
           <PrevButton id={question.id} />
           <NextButton id={question.id} />

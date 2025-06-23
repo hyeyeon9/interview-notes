@@ -28,3 +28,17 @@ export async function POST(req: Request) {
     );
   }
 }
+
+export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const questionId = searchParams.get("questionId");
+
+  if (!questionId)
+    return NextResponse.json({ error: "No id" }, { status: 400 });
+
+  const answer = await prisma.answer.findFirst({
+    where: { questionId },
+  });
+
+  return NextResponse.json(answer ?? {});
+}
