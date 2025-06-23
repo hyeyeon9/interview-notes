@@ -1,4 +1,5 @@
-import GptSuggester from "@/components/GptSuggester";
+import GptSuggester from "@/components/gpt/GptSuggester";
+
 
 export default async function QuestionsPage() {
   return (

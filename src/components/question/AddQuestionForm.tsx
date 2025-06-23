@@ -2,7 +2,8 @@
 
 import { addQuestion, FormState } from "@/app/actions/actions";
 import { useActionState } from "react";
-import FilterButtons from "./FilterButtons";
+import FilterButtons from "../common/FilterButtons";
+
 
 export default function AddQuestionForm() {
   const [formState, formAction] = useActionState<FormState, FormData>(

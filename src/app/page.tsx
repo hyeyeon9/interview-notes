@@ -1,4 +1,4 @@
-import FilteredQuestions from "@/components/FilteredQuestions";
+import FilteredQuestions from "@/components/question/FilteredQuestions";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 

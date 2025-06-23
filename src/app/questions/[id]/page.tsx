@@ -1,8 +1,8 @@
-import AnswerForm from "@/components/AnswerForm";
-import BackButton from "@/components/BackButton";
-import DeleteButton from "@/components/DeleteButton";
-import NextButton from "@/components/NextButton";
-import PrevButton from "@/components/PrevButton";
+import AnswerForm from "@/components/answer/AnswerForm";
+import BackButton from "@/components/common/BackButton";
+import DeleteButton from "@/components/common/DeleteButton";
+import NextButton from "@/components/common/NextButton";
+import PrevButton from "@/components/common/PrevButton";
 import { prisma } from "@/lib/prisma";
 
 interface Props {
@@ -37,7 +37,7 @@ export default async function QuestionDetailPage({ params }: Props) {
         <p className="text-lg py-2">{question.text}</p>
       </div>
 
-      <AnswerForm id={question.id} question={question.text}/>
+      <AnswerForm id={question.id} question={question.text} />
 
       <div className="flex justify-between">
         <DeleteButton id={question.id} />

@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import BackButton from "./BackButton";
-import AnswerForm from "./AnswerForm";
+import BackButton from "../common/BackButton";
+import AnswerForm from "../answer/AnswerForm";
+
 
 const categories = ["협업", "기술", "자기소개"];
 const levels = ["신입", "중고신입", "경력"];
