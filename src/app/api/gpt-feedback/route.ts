@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     .map((q) => q.trim())
     .filter((q) => q.length > 0);
 
-  await Promise.all(
+  const createdQuestions = await Promise.all(
     questions?.map((text) =>
       prisma.question.create({
         data: {
@@ -37,5 +37,5 @@ export async function POST(req: Request) {
     )
   );
 
-  return NextResponse.json({ result, saved: questions.length });
+  return NextResponse.json({ questions: createdQuestions });
 }
