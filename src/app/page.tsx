@@ -28,6 +28,16 @@ export default async function HomePage() {
               </button>
             </Link>
 
+            <Link href="/test">
+              <button
+                className="bg-black  
+              text-[18px] cursor-pointer
+              text-white px-5 py-3 rounded-lg font-bold transition-colors duration-200"
+              >
+                🎯 모의 면접 시험
+              </button>
+            </Link>
+
             <Link href="/questions/new">
               <button className="border-2 border-blue-600   cursor-pointer text-[18px] text-blue-600 hover:bg-blue-50 px-5 py-3 rounded-lg font-bold transition-colors duration-200">
                 + 새 질문 추가
