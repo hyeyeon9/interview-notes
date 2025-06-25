@@ -3,9 +3,8 @@ import { useState } from "react";
 import BackButton from "../common/BackButton";
 import AnswerForm from "../answer/AnswerForm";
 
-
 const categories = ["협업", "기술", "자기소개"];
-const levels = ["신입", "중고신입", "경력"];
+const levels = ["신입", "주니어", "시니어"];
 
 export default function GptSuggester() {
   const [category, setCategory] = useState("협업");

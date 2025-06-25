@@ -17,29 +17,29 @@ export default async function HomePage() {
           </h1>
 
           {/* Action Buttons */}
-          <div className="flex gap-3 mb-8 pt-4">
-            <Link href="/questions">
+          <div className="flex  mb-8  gap-4 pt-4 text-[18px]">
+            <Link href="/questions" className="w-1/3">
               <button
-                className="bg-blue-600 hover:bg-blue-700 
-              text-[18px] cursor-pointer
+                className="bg-blue-600 hover:bg-blue-700 w-full
+               cursor-pointer
               text-white px-5 py-3 rounded-lg font-bold transition-colors duration-200"
               >
                 GPT 질문받기
               </button>
             </Link>
 
-            <Link href="/test">
+            <Link href="/test" className="w-1/3">
               <button
-                className="bg-black  
-              text-[18px] cursor-pointer
+                className="bg-black   w-full
+               cursor-pointer
               text-white px-5 py-3 rounded-lg font-bold transition-colors duration-200"
               >
                 🎯 모의 면접 시험
               </button>
             </Link>
 
-            <Link href="/questions/new">
-              <button className="border-2 border-blue-600   cursor-pointer text-[18px] text-blue-600 hover:bg-blue-50 px-5 py-3 rounded-lg font-bold transition-colors duration-200">
+            <Link href="/questions/new" className="w-1/3">
+              <button className="border-2 border-blue-600   w-full cursor-pointer  text-blue-600 hover:bg-blue-50 px-5 py-3 rounded-lg font-bold transition-colors duration-200">
                 + 새 질문 추가
               </button>
             </Link>

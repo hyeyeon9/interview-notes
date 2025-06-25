@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const categories = ["협업", "기술", "자기소개"];
 const levels = ["신입", "주니어", "시니어"];
-const counts = [3, 5, 10];
+const counts = [3, 5];
 
 export default function TestPage() {
   const router = useRouter();
@@ -88,7 +88,7 @@ export default function TestPage() {
             {counts.map((n) => (
               <button
                 id="count"
-                className={`p-2 py-3 cursor-pointer border w-1/3 text-lg rounded-[10px] ${
+                className={`p-2 py-3 cursor-pointer border w-1/2 text-lg rounded-[10px] ${
                   count === n ? "bg-black text-white" : "border-gray-400"
                 }`}
                 key={n}
