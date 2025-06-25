@@ -2,12 +2,14 @@
 
 import { useAnswerStore } from "@/stores/testAnswers";
 import { Question } from "@prisma/client";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function ExamPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [current, setCurrent] = useState(0);
   const { answers, setAnswer } = useAnswerStore();
+  const router = useRouter();
 
   useEffect(() => {
     const data = localStorage.getItem("test-questions");
@@ -38,7 +40,9 @@ export default function ExamPage() {
     });
 
     const data = await res.json();
-    console.log("채점 결과:", data.result);
+
+    localStorage.setItem("gpt-exam-result", data.result);
+    router.push("/test/result");
   };
 
   if (!question) return <div>질문을 불러오는 중..</div>;
